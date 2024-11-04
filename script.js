@@ -85,17 +85,21 @@ body {
     bottom: 0;
     width: 100%;
 }
+// Inicialización del documento
 document.addEventListener('DOMContentLoaded', function() {
+    // Elementos principales
     const cube = document.querySelector('.cube');
     let isDragging = false;
     let currentX;
     let currentY;
     let initialRotation = { x: 0, y: 0 };
 
+    // Event Listeners
     cube.addEventListener('mousedown', startRotating);
     document.addEventListener('mousemove', rotate);
     document.addEventListener('mouseup', stopRotating);
 
+    // Funciones de rotación
     function startRotating(e) {
         isDragging = true;
         currentX = e.clientX;
@@ -121,4 +125,5 @@ document.addEventListener('DOMContentLoaded', function() {
     function stopRotating() {
         isDragging = false;
     }
+
 });
